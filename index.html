@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sport News</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@800;900&family=Mr+De+Haviland&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Our CSS -->
+  <link href="Style.css" rel="stylesheet">
+</head>
+
+<!-- data-bs-spy = the menu link turns bold automatically while you scroll (Bootstrap ScrollSpy, no JS to write) -->
+<body data-bs-spy="scroll" data-bs-target="#mainMenu" data-bs-root-margin="-80px 0px -60%" tabindex="0">
+
+<!-- =============== NAVBAR =============== -->
+<nav class="navbar navbar-expand-lg bg-white sticky-top">
+  <div class="container">
+    <a class="navbar-brand logo" href="#home">Sport News</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainMenu">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#category">Category</a></li>
+        <li class="nav-item"><a class="nav-link" href="#trending">Trending News</a></li>
+        <li class="nav-item"><a class="nav-link" href="#recent">Recent News</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ranking">Clubs Ranking</a></li>
+        <li class="nav-item"><a class="nav-link" href="#articles">Sports Article</a></li>
+      </ul>
+
+      <!-- opens the search popup (Bootstrap modal) -->
+      <button class="btn btn-search" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
+        <i class="bi bi-search me-2"></i>Search
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- =============== HERO =============== -->
+<section id="home" class="container hero">
+  <div class="row">
+
+    <!-- Left side -->
+    <div class="col-lg-9">
+      <div class="hero-left">
+        <div class="hero-circle"></div>
+        <h1 class="hero-title">TOP<br>SCORER TO<br>THE FINAL<br>MATCH</h1>
+
+        <img src="main.jpg" alt="Basketball player" class="hero-player">
+
+        <div class="hero-text">
+          <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+          <!-- opens the story popup -->
+          <button type="button" class="btn btn-dark btn-read" data-bs-toggle="modal" data-bs-target="#storyModal">CONTINUE READING</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right side : Today -->
+    <div class="col-lg-3">
+      <span class="today-tag">Today</span>
+
+      <a href="#" class="today-card">
+        <img src="1.jpg" alt="">
+        <div class="today-info">
+          <small>Race99 - 03 June 2023</small>
+          <h6>Ethiopian runners took the top four spots.</h6>
+        </div>
+      </a>
+
+      <a href="#" class="today-card">
+        <img src="2.jpg" alt="">
+        <div class="today-info">
+          <small>INDYCAR - 03 June 2023</small>
+          <h6>IndyCar Detroit: Dixon quickest in second practice</h6>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- =============== CATEGORY =============== -->
+<section id="category" class="container section">
+  <h5 class="section-title">Category</h5>
+
+  <div class="row g-3">
+    <div class="col-6 col-md-3">
+      <div class="cat-col">
+        <div class="cat-label" style="height:56px"><span>FOOTBALL</span></div>
+        <img src="s1.jpg" alt="Football" class="cat-img">
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <div class="cat-col">
+        <img src="s2.jpg" alt="Basketball" class="cat-img">
+        <div class="cat-label" style="height:80px"><span>BASCKET<br>BALL</span></div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <div class="cat-col">
+        <div class="cat-label" style="height:56px"><span>CAR SPORT</span></div>
+        <img src="s3.jpg" alt="Car sport" class="cat-img">
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <div class="cat-col">
+        <img src="s4.jpg" alt="Table tennis" class="cat-img">
+        <div class="cat-label" style="height:68px"><span>TABLE<br>TENNIS</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== TRENDING NEWS =============== -->
+<section id="trending" class="container section">
+  <div class="row g-0 trending">
+
+    <!-- list -->
+    <div class="col-lg-6 trending-list">
+      <h5 class="section-title">Trending News</h5>
+
+      <a href="#" class="trend-item">
+        <img src="T1.jpg" alt="">
+        <div>
+          <small class="meta">Race99 - 03 June 2023</small>
+          <h6>6-Year-Old Horse Dies at Belmont Park After Race Injury</h6>
+          <p>NEW YORK— A 6-year-old horse died after being injured in a race at Belmont Park ahead of next week's.</p>
+        </div>
+      </a>
+
+      <a href="#" class="trend-item">
+        <img src="T2.jpg" alt="">
+        <div>
+          <small class="meta">Jong.Lz - 03 June 2023</small>
+          <h6>Savilia Blunk Embraces Longer Season With World Cup</h6>
+          <p>Last year, Savilia Blunk took a more conservative approach to her first season as an Elite Class athlete, skipping some.</p>
+        </div>
+      </a>
+
+      <a href="#" class="trend-item">
+        <img src="T3.jpg" alt="">
+        <div>
+          <small class="meta">KingT - 03 June 2023</small>
+          <h6>Ryan Garcia is fighting again, this time on social media</h6>
+          <p>Boxing star Ryan Garcia and his promoter, Hall of Fame fighter Oscar De La Hoya, reignited their war of words via Twitter on.</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- big image -->
+    <div class="col-lg-6 photo-card" style="background-image:url('T4.jpg')">
+      <span class="photo-tag">Cycling</span>
+      <div class="photo-text">
+        <small>Debits - 03 June 2023</small>
+        <h4>DISCOVER THE MEMBER BENEFITS OF USA CYCLING!</h4>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =============== BIG SLIDER (Bootstrap carousel, 4 slides) =============== -->
+<section class="container section">
+  <div class="slider">
+
+    <div id="sliderCarousel" class="carousel slide" data-bs-interval="false">
+
+      <div class="carousel-inner">
+
+        <!-- slide 1 -->
+        <div class="carousel-item active">
+          <div class="photo-card slider-photo" style="background-image:url('F1.jpg')">
+            <span class="photo-tag">Football</span>
+            <div class="photo-text">
+              <small>Agence France-Presse - 04 June 2023</small>
+              <h3>LIONEL MESSI LEAVING LIGUE 1 TEAM PARIS SAINT-GERMAIN, CLUB CONFIRMS</h3>
+              <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- slide 2 (change the image name / text as you like) -->
+        <div class="carousel-item">
+          <div class="photo-card slider-photo" style="background-image:url('O1.jpg')">
+            <span class="photo-tag">Basketball</span>
+            <div class="photo-text">
+              <small>Sport News - 03 June 2023</small>
+              <h3>EUROLEAGUE FINAL: TOP SCORER LEADS HIS TEAM TO VICTORY</h3>
+              <p>The player scored the highest points of the night and was named the top scorer of the EuroLeague Finals.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- slide 3 -->
+        <div class="carousel-item">
+          <div class="photo-card slider-photo" style="background-image:url('O2.jpg')">
+            <span class="photo-tag">Hockey</span>
+            <div class="photo-text">
+              <small>Sport News - 02 June 2023</small>
+              <h3>VEGAS GOLDEN KNIGHTS READY FOR THE STANLEY CUP FINAL</h3>
+              <p>The Vegas Golden Knights will play the Florida Panthers in the Stanley Cup Final beginning Saturday.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- slide 4 -->
+        <div class="carousel-item">
+          <div class="photo-card slider-photo" style="background-image:url('O3.jpg')">
+            <span class="photo-tag">Badminton</span>
+            <div class="photo-text">
+              <small>Sport News - 01 June 2023</small>
+              <h3>AIR BADMINTON GETS BACKING FROM LOCAL FEDERATION</h3>
+              <p>The Badminton World Federation is developing Air Badminton, a new outdoor version of the sport.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- pager: class "carousel-indicators" makes Bootstrap highlight the active number by itself -->
+      <div class="pager carousel-indicators">
+        <button type="button" class="arrow-btn dark" data-bs-target="#sliderCarousel" data-bs-slide="prev"><i class="bi bi-arrow-left"></i></button>
+        <button type="button" class="num active" data-bs-target="#sliderCarousel" data-bs-slide-to="0" aria-current="true">1</button>
+        <button type="button" class="num" data-bs-target="#sliderCarousel" data-bs-slide-to="1">2</button>
+        <button type="button" class="num" data-bs-target="#sliderCarousel" data-bs-slide-to="2">3</button>
+        <button type="button" class="num" data-bs-target="#sliderCarousel" data-bs-slide-to="3">4</button>
+        <button type="button" class="arrow-btn dark" data-bs-target="#sliderCarousel" data-bs-slide="next"><i class="bi bi-arrow-right"></i></button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============== RECENT NEWS + CLUBS RANKING =============== -->
+<section class="container section">
+  <div class="row g-4">
+
+    <!-- Recent news -->
+    <div class="col-lg-6" id="recent">
+      <h5 class="section-title">Recent News</h5>
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <a href="#" class="recent-big" style="background-image:url('left.jpg')">
+            <small>Day 3 Highlights</small>
+            <h6>Baku 2023 World Taekwondo Championships</h6>
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <div class="recent-list">
+
+            <a href="#" class="recent-item">
+              <img src="F3.jpg" alt="">
+              <div>
+                <small class="meta">#Rufar_97 - 12 July 2023</small>
+                <h6>Baku 2023 Taekwondo Championships</h6>
+              </div>
+            </a>
+            <a href="#" class="recent-item">
+              <img src="F4.jpg" alt="">
+              <div>
+                <small class="meta">#Goft_Tuni - 20 July 2023</small>
+                <h6>Open Championship Royal Liverpool Golf</h6>
+              </div>
+            </a>
+            <a href="#" class="recent-item">
+              <img src="F5.jpg" alt="">
+              <div>
+                <small class="meta">#Cricket_Tuni - 21 July 2023</small>
+                <h6>Ireland Tour of England Test 2023</h6>
+              </div>
+            </a>
+
+            <!-- hidden items, shown when "More" is clicked (Bootstrap collapse) -->
+            <div class="collapse" id="moreRecent">
+              <a href="#" class="recent-item">
+                <img src="F3.jpg" alt="">
+                <div>
+                  <small class="meta">#Tennis_01 - 22 July 2023</small>
+                  <h6>Wimbledon Final Set For Sunday</h6>
+                </div>
+              </a>
+              <a href="#" class="recent-item">
+                <img src="F4.jpg" alt="">
+                <div>
+                  <small class="meta">#Golf_22 - 23 July 2023</small>
+                  <h6>Rookie Takes Early Lead At The Open</h6>
+                </div>
+              </a>
+              <a href="#" class="recent-item">
+                <img src="F5.jpg" alt="">
+                <div>
+                  <small class="meta">#Cricket_05 - 24 July 2023</small>
+                  <h6>England Name Squad For Next Test</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="text-center">
+              <!-- class "collapsed" is added/removed by Bootstrap, CSS swaps the text More / Less -->
+              <button type="button" class="btn btn-more collapsed" data-bs-toggle="collapse" data-bs-target="#moreRecent" aria-expanded="false">
+                <span class="t-more">More</span><span class="t-less">Less</span> <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clubs ranking -->
+    <div class="col-lg-6" id="ranking">
+      <h5 class="section-title">Clubs Ranking</h5>
+      <div class="rank-box">
+        <table class="table table-borderless align-middle mb-0">
+          <thead>
+            <tr><th>Club</th><th>GP</th><th>W</th><th>D</th><th>L</th><th>F</th><th>A</th><th>GD</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="no">1</span><i class="club" style="background:#6cabdd"></i>Manchester City</td><td>38</td><td>29</td><td>6</td><td>3</td><td>99</td><td>26</td><td>73</td></tr>
+            <tr><td><span class="no">2</span><i class="club" style="background:#c8102e"></i>Liverpool</td><td>38</td><td>28</td><td>8</td><td>2</td><td>94</td><td>26</td><td>68</td></tr>
+            <tr><td><span class="no">3</span><i class="club" style="background:#034694"></i>Chelsea</td><td>38</td><td>21</td><td>11</td><td>6</td><td>76</td><td>33</td><td>43</td></tr>
+            <tr><td><span class="no">4</span><i class="club" style="background:#132257"></i>Tottenham Hotspur</td><td>38</td><td>22</td><td>5</td><td>11</td><td>69</td><td>40</td><td>29</td></tr>
+            <tr><td><span class="no">5</span><i class="club" style="background:#ef0107"></i>Arsenal</td><td>38</td><td>22</td><td>3</td><td>13</td><td>61</td><td>48</td><td>13</td></tr>
+            <tr><td><span class="no">6</span><i class="club" style="background:#da291c"></i>Manchester United</td><td>38</td><td>16</td><td>10</td><td>12</td><td>57</td><td>57</td><td>0</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =============== SPORTS ARTICLE (Bootstrap carousel, 2 pages) =============== -->
+<section id="articles" class="container section">
+  <h5 class="section-title">Sports Article</h5>
+
+  <div id="articleCarousel" class="carousel slide" data-bs-interval="false">
+    <div class="carousel-inner">
+
+      <!-- page 1 -->
+      <div class="carousel-item active">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="article-photo" style="background-image:url('O1.jpg')"><span class="photo-tag">Basketball</span></div>
+            <div class="author"><img src="face.jpg" alt=""><span>Jake Will.</span></div>
+            <small class="meta">04 June 2023</small>
+            <h6 class="article-title">5 Exercises Basketball Players Should Be Using To Develop Strength</h6>
+            <p class="article-text">This article was written by Jake Willhoite from Healthlisted.com Strength in basketball isn't all about a massive body mass or ripped muscles.</p>
+          </div>
+
+          <div class="col-md-4">
+            <div class="article-photo" style="background-image:url('O2.jpg')"><span class="photo-tag">Hockey</span></div>
+            <div class="author"><img src="face.jpg" alt=""><span>Foxi.zacon</span></div>
+            <small class="meta">03 June 2023</small>
+            <h6 class="article-title">Golden Knights out to fulfill owner's quest to win Stanley Cup in 6th year</h6>
+            <p class="article-text">The Vegas Golden Knights will play the Florida Panthers in the Stanley Cup Final beginning Saturday.</p>
+          </div>
+
+          <div class="col-md-4">
+            <div class="article-photo" style="background-image:url('O3.jpg')"><span class="photo-tag">Badminton</span></div>
+            <div class="author"><img src="face.jpg" alt=""><span>Bong Lozada</span></div>
+            <small class="meta">01 June 2023</small>
+            <h6 class="article-title">'Outdoor' Badminton Gets Support From Local Federation</h6>
+            <p class="article-text">The Badminton World Federation is developing Air Badminton and the country's governing body, Philippine Badminton Association.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- page 2 (change the text / image names as you like) -->
+      <div class="carousel-item">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="article-photo" style="background-image:url('O1.jpg')"><span class="photo-tag">Basketball</span></div>
+            <div class="author"><img src="face.jpg" alt=""><span>Sam Rivers</span></div>
+            <small class="meta">30 May 2023</small>
+            <h6 class="article-title">How Young Players Can Improve Their Shooting Form</h6>
+            <p class="article-text">Good shooting starts with balance, a steady base and a smooth follow-through on every attempt.</p>
+          </div>
+
+          <div class="col-md-4">
+            <div class="article-photo" style="background-image:url('O2.jpg')"><span class="photo-tag">Hockey</span></div>
+            <div class="author"><img src="face.jpg" alt=""><span>Lena Frost</span></div>
+            <small class="meta">29 May 2023</small>
+            <h6 class="article-title">Panthers Prepare For A Physical Stanley Cup Final</h6>
+            <p class="article-text">Florida says its depth and fast skating will be the key to beating the Golden Knights in the final series.</p>
+          </div>
+
+          <div class="col-md-4">
+            <div class="article-photo" style="background-image:url('O3.jpg')"><span class="photo-tag">Badminton</span></div>
+            <div class="author"><img src="face.jpg" alt=""><span>Mia Tan</span></div>
+            <small class="meta">28 May 2023</small>
+            <h6 class="article-title">Beginner's Guide To Choosing The Right Racket</h6>
+            <p class="article-text">Weight, balance and string tension all matter when you pick your first badminton racket.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="mt-4 d-flex gap-2">
+    <button type="button" class="arrow-btn dark" data-bs-target="#articleCarousel" data-bs-slide="prev"><i class="bi bi-arrow-left"></i></button>
+    <button type="button" class="arrow-btn dark" data-bs-target="#articleCarousel" data-bs-slide="next"><i class="bi bi-arrow-right"></i></button>
+  </div>
+</section>
+
+<!-- =============== NEWSLETTER =============== -->
+<section class="container section">
+  <div class="newsletter">
+    <div class="row align-items-center">
+      <div class="col-md-7">
+        <h2 class="news-title">NEWSLETTER<br>SUBSCRIPTION</h2>
+
+        <!-- "required" + type="email" = the browser checks the email for you.
+             Change action="#" to your own form link (e.g. Formspree) to really receive emails. -->
+        <form class="news-form" action="#" method="get">
+          <input type="email" name="email" class="form-control" placeholder="shovon.khan0099@gmail.com" required>
+          <button type="submit" class="btn btn-dark"><i class="bi bi-arrow-up-right"></i></button>
+        </form>
+      </div>
+      <div class="col-md-5 text-center">
+        <img src="second.jpg" alt="Player" class="news-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== FOOTER =============== -->
+<footer class="container footer">
+  <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+    <div class="d-flex gap-2">
+      <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social"><i class="bi bi-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" class="social"><i class="bi bi-twitter"></i></a>
+    </div>
+
+    <!-- these buttons also control the big slider -->
+    <div class="pager p-0 bg-transparent">
+      <button type="button" class="arrow-btn dark" data-bs-target="#sliderCarousel" data-bs-slide="prev"><i class="bi bi-arrow-left"></i></button>
+      <button type="button" class="num" data-bs-target="#sliderCarousel" data-bs-slide-to="0">1</button>
+      <button type="button" class="num" data-bs-target="#sliderCarousel" data-bs-slide-to="1">2</button>
+      <button type="button" class="num" data-bs-target="#sliderCarousel" data-bs-slide-to="2">3</button>
+      <button type="button" class="num" data-bs-target="#sliderCarousel" data-bs-slide-to="3">4</button>
+      <button type="button" class="arrow-btn dark" data-bs-target="#sliderCarousel" data-bs-slide="next"><i class="bi bi-arrow-right"></i></button>
+    </div>
+  </div>
+</footer>
+
+
+<!-- =============== SEARCH POPUP =============== -->
+<!-- The form sends the word to a Google search (opens in a new tab) -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form class="modal-body" action="https://www.google.com/search" method="get" target="_blank">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search sports news..." required>
+          <button type="submit" class="btn btn-dark"><i class="bi bi-search"></i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- =============== STORY POPUP (opened by CONTINUE READING) =============== -->
+<div class="modal fade" id="storyModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Top Scorer To The Final Match</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="main.jpg" class="img-fluid rounded w-100 mb-3 story-img" alt="Basketball player">
+        <p class="mb-2">The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals.</p>
+        <p class="mb-0 text-muted">Write the full story here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Bootstrap's own file (needed for carousel, popup, More button). No custom JavaScript. -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

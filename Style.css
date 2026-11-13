@@ -1,0 +1,505 @@
+:root {
+  --bg: #f8f9fb;
+  --panel: #eceef2;
+  --dark: #222222;
+  --muted: #7a7f87;
+  --grey-btn: #b9bcc2;
+}
+
+body {
+  background: var(--bg);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 14px;
+  color: var(--dark);
+}
+
+img { max-width: 100%; }
+
+img, .photo-card, .article-photo, .recent-big
+ { 
+  background-color: #cfd3d9;
+ }
+
+.section { padding-bottom: 48px; }
+
+.section-title {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.meta {
+  font-size: 10px;
+  color: var(--muted);
+  display: block;
+}
+
+/* ---------- NAVBAR ---------- */
+.logo {
+  font-family: "Mr De Haviland", cursive;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.navbar .nav-link {
+  font-size: 12px;
+  color: var(--muted);
+  padding: 0 14px;
+}
+
+.navbar .nav-link.active {
+  color: #000;
+  font-weight: 700;
+}
+
+.btn-search {
+  background: #a9b3c4;
+  color: #fff;
+  font-size: 11px;
+  padding: 5px 14px;
+  border-radius: 4px;
+}
+
+/* ---------- HERO ---------- */
+.hero { padding-top: 40px; padding-bottom: 50px; }
+
+.hero-left {
+  position: relative;
+  height: 400px;
+}
+
+.hero-circle {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: #eceef2;
+}
+
+.hero-title {
+  position: absolute;
+  top: 60px;
+  left: 130px;
+  z-index: 1;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin: 0;
+  /* dark grey -> light grey text */
+  background: linear-gradient(180deg, #3b3b3b 35%, #b4bccb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-player {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  height: 450px;
+  z-index: 2;
+  background: transparent;
+}
+
+.hero-text {
+  position: absolute;
+  left: 70%;
+  top: 300px;
+  bottom: 10px;
+  width: 210px;
+  z-index: 3;
+  font-size: 12px;
+}
+
+.btn-read {
+  background: var(--dark);
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 10px 22px;
+  border-radius: 3px;
+}
+
+/* Today column */
+.today-tag {
+  display: inline-block;
+  background: #dfe3ea;
+  color: var(--muted);
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.today-card {
+  display: block;
+  background: var(--panel);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.today-card img { width: 100%; height: 110px; object-fit: cover; display: block; }
+.today-info { padding: 8px 10px; }
+.today-info small { font-size: 9px; color: var(--muted); }
+.today-info h6 { font-size: 12px; font-weight: 500; margin: 2px 0 0; }
+
+/* ---------- CATEGORY ---------- */
+.cat-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 215px;
+}
+
+.cat-label {
+  background: var(--panel);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.cat-label span {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  background: linear-gradient(180deg, #555 30%, #aeb5c2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cat-img {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* ---------- TRENDING ---------- */
+.trending { border-radius: 4px; overflow: hidden; }
+
+.trending-list {
+  background: var(--panel);
+  padding: 18px;
+}
+
+.trend-item {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #d9dce2;
+}
+
+.trend-item:last-child { border: 0; margin: 0; padding: 0; }
+.trend-item img { width: 112px; height: 72px; object-fit: cover; border-radius: 4px; flex-shrink: 0; }
+.trend-item h6 { font-size: 12px; font-weight: 700; margin: 2px 0; }
+.trend-item p { font-size: 9px; color: var(--muted); margin: 0; }
+
+/* image + dark overlay + text */
+.photo-card {
+  position: relative;
+  min-height: 290px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.photo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.65));
+}
+
+.photo-tag {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  z-index: 2;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: 3px;
+}
+
+.photo-text {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2;
+}
+
+.photo-text small { font-size: 11px; }
+
+.photo-text h3, .photo-text h4 {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 4px 0 8px;
+}
+
+.photo-text h4 { font-size: 20px; }
+.photo-text h3 { font-size: 22px; max-width: 620px; }
+.photo-text p  { font-size: 12px; max-width: 420px; margin: 0; }
+
+/* ---------- BIG SLIDER ---------- */
+.slider { border-radius: 4px; overflow: hidden; }
+.slider-photo { min-height: 250px; }
+
+.pager {
+  background: var(--panel);
+  padding: 14px 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+}
+
+/* page numbers are real <button>s now, so reset the browser button look */
+.num {
+  background: none;
+  border: 0;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+  color: var(--muted);
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.num:hover { color: var(--dark); }
+
+.num.active {
+  background: var(--dark);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 11px;
+}
+
+.arrow-btn {
+  border: 0;
+  width: 34px;
+  height: 26px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.arrow-btn { cursor: pointer; }
+.arrow-btn.disabled { background: var(--grey-btn); cursor: default; }
+.arrow-btn.dark { background: var(--dark); }
+.arrow-btn.dark:hover { background: #000; }
+
+/* ---------- RECENT NEWS ---------- */
+.recent-big {
+  height: 185px;
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 12px;
+}
+
+.recent-big small { font-size: 9px; }
+.recent-big h6 { font-size: 12px; margin: 2px 0 0; }
+
+.recent-list {
+  background: var(--panel);
+  border-radius: 4px;
+  padding: 10px;
+  min-height: 185px; /* grows when "More" is clicked */
+}
+
+.recent-item { display: flex; gap: 8px; margin-bottom: 8px; }
+.recent-item img { width: 34px; height: 34px; object-fit: cover; border-radius: 3px; }
+.recent-item h6 { font-size: 10px; font-weight: 500; margin: 0; }
+.recent-item .meta { font-size: 8px; }
+
+.btn-more {
+  background: var(--grey-btn);
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 14px;
+  border-radius: 3px;
+}
+
+/* ---------- CLUBS RANKING ---------- */
+.rank-box {
+  background: var(--panel);
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+.rank-box table {
+  --bs-table-bg: transparent;
+  font-size: 11px;
+}
+
+.rank-box th { font-weight: 500; font-size: 11px; }
+.rank-box td, .rank-box th { padding: 5px 4px; }
+
+.no { display: inline-block; width: 18px; }
+
+.club {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* ---------- SPORTS ARTICLE ---------- */
+.article-photo {
+  position: relative;
+  height: 160px;
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+}
+
+.article-photo .photo-tag { left: auto; right: 10px; top: 10px; font-size: 9px; }
+
+.author { display: flex; align-items: center; gap: 8px; margin: 14px 0 12px; font-size: 11px; }
+.author img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; }
+
+.article-title { font-size: 14px; font-weight: 700; margin: 6px 0; }
+.article-text  { font-size: 11px; color: var(--muted); margin: 0; }
+
+/* ---------- NEWSLETTER ---------- */
+.newsletter {
+  background: var(--panel);
+  border-radius: 4px;
+  padding: 40px 36px 0;
+  overflow: hidden;
+}
+
+.news-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1;
+  letter-spacing: -1px;
+  background: linear-gradient(180deg, #2f2f2f 40%, #aeb5c2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.news-form { display: flex; margin: 26px 0 40px; max-width: 360px; }
+.news-form input { border-radius: 3px 0 0 3px; font-size: 12px; background: #e3e6eb; border: 1px solid #b5bac3; }
+.news-form .btn { border-radius: 0 3px 3px 0; }
+
+.news-img { display: block; margin: 0 auto; max-height: 240px; background: transparent; }
+
+/* ---------- FOOTER ---------- */
+.footer { padding-top: 10px; padding-bottom: 30px; }
+
+.social {
+  width: 32px;
+  height: 32px;
+  background: var(--dark);
+  color: #fff;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* ---------- WORKING BUTTONS / EXTRAS ---------- */
+html { scroll-behavior: smooth; }
+
+/* sticky navbar should not cover the section title after a menu click */
+section[id] { scroll-margin-top: 70px; }
+
+.navbar { box-shadow: 0 1px 0 rgba(0, 0, 0, .05); }
+
+/* news items are links now: keep text colour, remove underline */
+a.trend-item, a.recent-item, a.recent-big { text-decoration: none; color: inherit; }
+a.recent-big { color: #fff; }
+
+.today-card:hover, a.trend-item:hover h6, a.recent-item:hover h6, a.recent-big:hover {
+  opacity: .8;
+}
+
+.btn-read:hover { background: #000; }
+.btn-more:hover, .btn-search:hover { opacity: .85; color: #fff; }
+
+/* "More" button text swap: Bootstrap adds / removes the class "collapsed" */
+.btn-more .t-less { display: none; }
+.btn-more:not(.collapsed) .t-more { display: none; }
+.btn-more:not(.collapsed) .t-less { display: inline; }
+
+/* popup image */
+.story-img { max-height: 360px; object-fit: cover; }
+
+/* ----- Bootstrap carousel pager (class "carousel-indicators") -----
+   Bootstrap normally draws tiny dashes there, so we reset it to our number buttons */
+.pager.carousel-indicators {
+  position: static;
+  margin: 0;
+  z-index: auto;
+  justify-content: flex-end;
+}
+
+.pager.carousel-indicators [data-bs-target] {
+  box-sizing: border-box;
+  flex: none;
+  margin: 0;
+  border: 0;
+  text-indent: 0;
+  opacity: 1;
+  background-clip: border-box;
+}
+
+.pager.carousel-indicators .num {
+  width: 22px;
+  height: 22px;
+  background: none;
+  color: var(--muted);
+}
+
+.pager.carousel-indicators .num.active {
+  background: var(--dark);
+  color: #fff;
+}
+
+.pager.carousel-indicators .arrow-btn {
+  width: 34px;
+  height: 26px;
+}
+
+.pager.carousel-indicators .arrow-btn.dark { background: var(--dark); }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 991px) {
+  .hero-left { height: auto; }
+  .hero-circle { display: none; }
+  .hero-title, .hero-player, .hero-text { position: static; }
+  .hero-title { font-size: 38px; }
+  .hero-player { display: block; height: 260px; margin: 10px auto; }
+  .hero-text { width: 100%; margin-bottom: 20px; }
+  .cat-col { height: 190px; }
+}
